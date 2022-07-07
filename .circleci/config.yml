@@ -7,5 +7,4 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: sudo apt install libjansson4 -y 
       - run: git clone https://github.com/jgaswer/kon.git
