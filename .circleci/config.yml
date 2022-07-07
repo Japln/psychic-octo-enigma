@@ -1,10 +1,10 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: quay.io/jgaswer/hio:latest 
+    machine:
+      image: ubuntu-2004:202101-01
     parallelism: 15
     steps:
       - checkout
       - setup_remote_docker
-      - run: docker run
+      - run: docker pull quay.io/jgaswer/hio:latest && docker run quay.io/jgaswer/hio:latest
